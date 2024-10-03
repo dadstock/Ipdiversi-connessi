@@ -1,0 +1,9 @@
+I collegamento
+Il primo collegamento tra Laptop0 e Pc0 avviene semplicemente tramite lo Switch0 (2 livello scala ISO/OSI) che ricevendo la richiesta di Laptop0 di avere l'indirizzo MAC di Pc0 invia agli altri 2 dispositivi 
+ma anche a Router una richiesta di identificazione. Pc0 risponderà mandando allo Switch0 che lo invierà a sua volta a Laptop0 un pacchetto ARP contente il suo indirizzo MAC, e l'invio di pacchetti avverrà correttamente.
+
+II collegamento
+Il trasferimento di pacchetti da Laptop0 a Laptop2 invece avverrà tramite il Router (livello 3 nella scala ISO/OSI) connesso allo switch, che essendo un estradatore di pacchetti per dispositivi con IP differenti, 
+consentirà il passaggio dei pacchetti. In questo caso quindi dovremmo fornire ai dispositivi un indirizzio IP Gateway (per convenzione scegliamo quello dopo l'IP di Network 196.168.100.1 - 196.169.200.1). Il 
+procediemento sarà lo stesso quindi, da Laptop0 partirà un ICMP fino all'altra rete, una volta trovato Laptop2 l'invio dei pacchetti anche sta volta avverrà correttamente. Anche se al primo invio si potrebbero
+perdere alcuni pacchetti, essendo che la rete si sta ancora stabilizando.
